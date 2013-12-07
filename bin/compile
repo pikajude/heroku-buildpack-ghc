@@ -148,6 +148,7 @@ cabal update
 echo "-----> Installing user application"
 cd $BUILD_DIR
 cabal install -j --disable-library-profiling --disable-executable-profiling --disable-shared
+cabal build
 
 echo "-----> Caching latest cabal packages"
 rm -fr $CACHE_DIR/.cabal_sandbox
